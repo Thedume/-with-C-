@@ -75,6 +75,21 @@ void SLL_InsertAfter(Node* Current, Node* NewNode)
 	Current->NextNode = NewNode;
 }
 
+// 노드 개수 세기 연산
+int SLL_GetNodeCount(Node* Head)
+{
+	int Count = 0;
+	Node* Current = Head;
+
+	while (Current != NULL)
+	{
+		Current = Current->NextNode;
+		Count++;
+	}
+
+	return Count;
+}
+
 int main() {
 	// Vitamin QUIZ 1-1
 	// printf("sizeof(Node): %d, sizeof(Node*): %d.\n", sizeof(Node), sizeof(Node*));
