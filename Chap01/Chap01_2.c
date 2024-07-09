@@ -24,8 +24,25 @@ void SLL_DestroyNode(Node* _Node) {
 	free(_Node);
 }
 
-int main() {
+// 노드 추가 연산
+void SLL_AppendNode(Node** Head, Node* NewNode)
+{
+	// 헤드 노드가 NULL이라면 새로운 노드가 Head가 된다.
+	if ((*Head) == NULL)
+		*Head = NewNode;
+	else {
+		// 테일을 찾아 NewNode를 연결한다.
+		Node* Tail = (*Head);
+		while (Tail->NextNode != NULL)
+			Tail = Tail->NextNode;
 
+		Tail->NextNode = NewNode;
+	}
+}
+
+int main() {
+	// Vitamin QUIZ 1-1
+	// printf("sizeof(Node): %d, sizeof(Node*): %d.\n", sizeof(Node), sizeof(Node*));
 
 
 	return 0;
