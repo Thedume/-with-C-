@@ -44,6 +44,12 @@ int main() {
 	// Vitamin QUIZ 1-1
 	// printf("sizeof(Node): %d, sizeof(Node*): %d.\n", sizeof(Node), sizeof(Node*));
 
+	Node* List = NULL;
+	Node* NewNode = NULL;
+	NewNode = SLL_CreateNode(117);	// 자유 저장소에 노드 생성
+	SLL_AppendNode(&List, NewNode); // 생성한 노드를 List에 추가
+	NewNode = SLL_CreateNode(119);	// 자유 저장소에 또 다른 노드 생성
+	SLL_AppendNode(&List, NewNode);	// 생성한 노드를 List에 추가
 
 	return 0;
 }
