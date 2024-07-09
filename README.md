@@ -13,3 +13,5 @@
 ### 0.1 자료구조
 
 자료구조(Data Structure)는 컴퓨터가 **데이터를 효율적으로 다룰 수 있게 도와주는 데이터 보관 방법과 데이터에 관한 연산의 총체**를 뜻합니다.  
+![자료구조](https://github.com/Thedume/This-is-Algorithm/assets/68494100/311a694c-b343-424b-9e43-80dec0116e1e)  
+
