@@ -78,6 +78,33 @@ void DDL_RemoveNode(Node** Head, Node* Remove)
 	Remove->NextNode = NULL;
 }
 
+// 노드 삽입
+void DLL_InsertAfter(Node* Current, Node* NewNode)
+{
+	NewNode->NextNode = Current->NextNode;
+	NewNode->PrevNode = Current;
+
+	if (Current->NextNode != NULL) {
+		Current->NextNode->PrevNode = NewNode;
+		Current->NextNode = NewNode;
+	}
+}
+
+// 노드 개수 세기 연산
+int DLL_GetNodeCount(Node* Head)
+{
+	unsigned int Count = 0;
+	Node* Current = Head;
+
+	while (Current != NULL)
+	{
+		Current = Current->NextNode;
+		Count++;
+	}
+
+	return Count;
+}
+
 int main() {
 	Node* List = NULL;
 
